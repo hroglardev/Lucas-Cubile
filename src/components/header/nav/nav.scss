@@ -1,0 +1,83 @@
+@use "../../../styles/variables" as *;
+.nav {
+  background-color: $primary-color;
+  position: absolute;
+  top: 70px;
+  right: max(12px, calc(12px + (100 - 8) * ((100vw - 600px) / (1200 - 600))));
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 0;
+  width: 0;
+  overflow: hidden;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  border-radius: 10px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    cursor: pointer;
+  }
+
+  .menu-trigger {
+    appearance: none;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+  }
+
+  .menu-trigger, &::after, &::before {
+    content: "";
+    width: 60px;
+    height: 10px;
+    background-color: black;
+    border-radius: 9999px; 
+    transition: all 0.3s ease-in-out;
+    transform-origin: right center;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &:has(input:checked) {
+    &::before {
+      transform: rotate(-45deg);
+      width: calc((10px * 3 + 5px * 2) * sqrt(2));
+      translate: 0 calc(10px / -2);
+    }
+
+    &::after {
+      transform: rotate(45deg);
+      width: calc((10px * 3 + 5px * 2) * sqrt(2));
+      translate: 0 calc(10px / 2);
+    }
+
+    .menu-trigger{
+      opacity: 0;
+      width: 0;
+    }
+  }
+}
+
+
+
+.menu:has(input:checked) + .nav {
+  transition: all 0.3s ease-in-out;
+  max-height: 11rem;
+  width: 300px;
+}
+
+
+
+
+
+
+
+
+

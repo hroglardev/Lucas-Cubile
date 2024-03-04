@@ -1,5 +1,10 @@
 'use strict'
 
-const { createHtmlElement } = require('./helpers/htmlElements')
+import './styles/globals.scss'
+import { header } from './components/header/header'
+import { appendChildren, selectElement } from './helpers/htmlElements'
 
-console.log('Hello world')
+const headerTag = selectElement('.header')
+const headerContainer = header()
+
+appendChildren(headerTag, headerContainer)

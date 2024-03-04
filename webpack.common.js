@@ -42,7 +42,7 @@ module.exports = {
         }
       },
       {
-        test: /\.svg$i/,
+        test: /\.svg$/i,
         type: 'asset/resource',
         generator: {
           filename: 'assets/icons/[name].[ext]'

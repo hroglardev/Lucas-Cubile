@@ -1,0 +1,28 @@
+@use "../../styles/variables" as *;
+
+.header {
+  width: 100vw;
+  padding: 12px 12px;
+  background-color: $primary-color;
+  @media (min-width: 600px){
+    padding-inline: calc(12px + (100 - 8) * ((100vw - 600px) / (1200 - 600)));
+  }
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  .page-title {
+    display: none;
+
+    @media (min-width: 800px) {
+      display:block;
+    }
+  }
+}
