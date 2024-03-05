@@ -1,4 +1,5 @@
 @use "../../../styles/variables" as *;
+
 .nav {
   background-color: $primary-color;
   position: absolute;
@@ -13,6 +14,13 @@
   padding-bottom: 15px;
   padding-top: 15px;
   border-radius: 10px;
+
+  @media (min-width: 700px) {
+    position: static;
+    flex-direction: row;
+    max-height: fit-content;
+    width: fit-content;
+  }
 }
 
 .menu {
@@ -21,9 +29,12 @@
   justify-content: center;
   gap: 5px;
   transition: all 0.3s ease-in-out;
-  &:hover {
-    cursor: pointer;
+  cursor: pointer;
+  @media (min-width: 700px) {
+    display: none;
   }
+
+
 
   .menu-trigger {
     appearance: none;
@@ -63,6 +74,8 @@
       width: 0;
     }
   }
+
+  
 }
 
 
