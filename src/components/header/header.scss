@@ -4,6 +4,7 @@
   width: 100vw;
   padding: 12px 12px;
   background-color: $primary-color;
+
   @media (min-width: 600px){
     padding-inline: calc(12px + (100 - 8) * ((100vw - 600px) / (1200 - 600)));
   }

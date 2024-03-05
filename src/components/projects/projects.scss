@@ -1,0 +1,16 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 12px 12px;
+  @media (min-width: 600px){
+    padding-inline: calc(12px + (100 - 8) * ((100vw - 600px) / (1200 - 600)));
+  }
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3px;
+  justify-items: center;
+}

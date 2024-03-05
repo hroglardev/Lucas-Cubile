@@ -1,8 +1,11 @@
 
-
 .nav-link-item {
   color: white;
   display: grid;
   place-content: center;
   padding: 10px;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

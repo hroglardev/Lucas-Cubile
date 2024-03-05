@@ -6,7 +6,7 @@ export const navItem = (text, link) => {
   const navLinkItem = createHtmlElement('a', ['nav-link-item'], text)
   navLinkItem.setAttribute('href', link)
 
-  appendChildren(navLinkItem, navListItem)
+  appendChildren(navListItem, navLinkItem)
 
-  return navLinkItem
+  return navListItem
 }

@@ -1,0 +1,29 @@
+$translate-value: 70px;
+
+
+.image-container {
+  width: min(100%, 400px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+
+  border-radius: 8px;
+  animation: fadeIn 1s ease-in-out forwards;
+  .main-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+

@@ -1,0 +1,29 @@
+@use "../../styles/variables" as *;
+
+.about {
+  background-color: $primary-color;
+  padding: 12px 12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 1px;
+ 
+  @media (min-width: 600px){
+    padding-inline: calc(12px + (100 - 8) * ((100vw - 600px) / (1200 - 600)));
+  }
+
+  @media (max-width: 945px){
+    justify-content: center;
+    
+  }
+}
+
+.diagonal {
+  width: 0;
+  height: 0;
+  border-left: 100vw solid transparent;
+  border-bottom: 14.9vw solid white;
+  margin-top: -14.9vw;
+}

@@ -11,14 +11,16 @@ const navLinks = [
 export const nav = () => {
   const menuContainer = createHtmlElement('label', ['menu'])
   const menu = createHtmlElement('input', ['menu-trigger'])
+  const list = createHtmlElement('ul', ['nav-list'])
+  const navElement = createHtmlElement('nav', ['nav'])
   menu.type = 'checkbox'
 
   appendChildren(menuContainer, menu)
-  const navElement = createHtmlElement('nav', ['nav'])
+  appendChildren(navElement, list)
 
   navLinks.forEach((navLink) => {
     const navItemElement = navItem(navLink.linkName, navLink.link)
-    appendChildren(navElement, navItemElement)
+    appendChildren(list, navItemElement)
   })
 
   return { menuContainer, navElement }

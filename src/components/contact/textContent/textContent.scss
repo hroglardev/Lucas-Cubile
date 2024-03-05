@@ -1,0 +1,20 @@
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  
+
+  @media (max-width: 729px){
+    width: 100%;
+  }
+  .phone-container, .whatsApp-container, .email-container, .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .social-icons {
+    gap: 15px;
+    margin-top: 40px;
+  }
+}

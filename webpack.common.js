@@ -14,8 +14,8 @@ module.exports = {
       template: './public/index.html',
       filename: 'index.html',
       scriptLoading: 'defer',
-      inject: 'head'
-      // favicon: './public/favicon.ico'
+      inject: 'head',
+      favicon: './public/favicon.ico'
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
