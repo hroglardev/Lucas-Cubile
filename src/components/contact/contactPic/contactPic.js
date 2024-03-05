@@ -1,6 +1,6 @@
 import { appendChildren, createHtmlElement } from '../../../helpers/htmlElements'
 import './contactPic.scss'
-import ContactPic from '../../../assets/images/contact-pic.jpg'
+import ContactPic from '../../../assets/images/contact-pic.webp'
 
 export const contactPic = () => {
   const imageContainer = createHtmlElement('div', ['pic-container'])

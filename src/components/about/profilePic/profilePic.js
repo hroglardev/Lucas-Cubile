@@ -1,5 +1,5 @@
 import './profilePic.scss'
-import ProfilePic from '../../../assets/images/profile.jpeg'
+import ProfilePic from '../../../assets/images/profile.webp'
 import { createHtmlElement, appendChildren } from '../../../helpers/htmlElements'
 
 export const profilePic = () => {
