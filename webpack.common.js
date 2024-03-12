@@ -1,6 +1,6 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
 
 module.exports = {
   entry: './src/index.js',
@@ -39,7 +39,8 @@ module.exports = {
         type: 'asset/resource',
         generator: {
           filename: 'assets/images/[name].[ext]'
-        }
+        },
+        exclude: /docs_images/
       },
       {
         test: /\.svg$/i,
@@ -69,4 +70,4 @@ module.exports = {
       chunks: 'all'
     }
   }
-}
+};
