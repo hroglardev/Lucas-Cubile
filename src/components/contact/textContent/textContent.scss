@@ -16,5 +16,8 @@
   .social-icons {
     gap: 15px;
     margin-top: 40px;
+    img {
+      filter: invert(100%);
+    }
   }
 }
