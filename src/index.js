@@ -1,6 +1,6 @@
 'use strict';
 
-import './styles/globals.scss';
+import './styles/globals.scs';
 import { header } from './components/header/header';
 import { appendChildren, selectElement } from './helpers/htmlElements';
 import { about } from './components/about/about';
